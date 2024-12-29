@@ -1,0 +1,270 @@
+*{
+    font-family: sans-serif;
+}
+
+#id1{
+    height: 80px;
+    width: 100%;
+    /* background-color: lightseagreen; */
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 0 4vw;
+    border-bottom: 3px solid lightseagreen;
+    box-shadow: 0px 0px 10px lightseagreen;
+}
+
+.nav-part2{
+    display: flex;
+    /* align-items: center;
+    justify-content: space-evenly; */
+    gap: 4vw;
+    align-items: center;
+    /* use of gap --> We can use gap property to create space between the grid items. We have to use gap beacuse align-items and justify-content will not work in flexbox. Why not work? because align-items and justify-content are used to align the items in the container. */
+}
+
+.nav h2{
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.nav h4{
+    font-size: 1.2vw;
+    /* font-weight: 500; */
+}
+
+.nav h4:hover{
+    color: lightseagreen;
+    transition-duration: 0.6s;
+    /* border-bottom: 2px solid lightseagreen; */
+    margin-top: -2px;
+}
+
+.nav h2,h4{
+    cursor: pointer;
+}
+
+.nav i{
+    font-size: 1.5vw;
+    font-weight: 700;
+    cursor: pointer;
+    /* padding-top: 25px; */
+    /* display: flex;
+    align-items: center; */
+    display: none;
+}
+
+#id2 {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    top: 8px;
+    right: 8px;
+    background-color:  lightseagreen;
+    color: #ffffff;
+    font-size: 3.2vw;
+    font-weight: 700;
+    border: 1px solid #ccc;
+    box-shadow: #d0d0d0 0px 0px 10px;
+    padding: 60px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#id2 li:hover{
+    border-bottom: 1px solid #d0d0d0;
+}
+
+#id2 li{
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #d0d0d0; */
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 3vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .nav{
+        background-color: lightseagreen;
+        color: #ffffff;
+        padding: 0 4vw;
+        height: 60px;
+    }
+    .nav h2{
+        font-size: 5vw;
+    }
+
+    .nav h4{
+        font-size: 2.5vw;
+        display: none;
+    }
+
+    .nav i{
+        display: block;
+        /* use of display: block; --> The display: block; property is used to display an element as a block element like <div>. It starts on a new line and takes up the full width available. 
+        use of initial. display: initial; --> The display: initial; property is used to set the default value of the display property. */
+
+        font-size: 5vw;
+    }
+
+    .nav-part2 #sign{
+        font-size: 2vh;
+        padding-right: 15vw;
+        width: 15vw;
+    }
+
+    .nav-part2 #sign:hover{
+        background-color: #ffffff;
+        color: lightseagreen;
+        width: 16vw;
+        height: 3.2vh;
+        box-shadow: 0px 0px 3px #d0d0d0;
+    }
+
+    .content{
+        flex-direction: column;
+        height: calc(97.9vh - 60px);
+    }
+
+    .content .left{
+        width: 100%;
+        height: 48%;
+        padding: 3vw 4vw;
+    }
+
+    .content .left h1{
+        font-size: 9vw;
+        line-height: 11vw;
+    } 
+
+    .content .left p{
+        font-size: 3.3vw;
+        line-height: 4.5vw;
+        width: 90%;
+        margin-top: 4.5vw;
+        margin-bottom: 6vw;
+    }
+
+    .content #now{
+        padding: 1.4vh 4vw;
+        font-size: 3vw;
+        border-radius: 3px;
+        font-weight: 600;
+    }
+
+    .content .right{
+        width: 100%;
+        height: 52%;
+    }
+
+    #id2 li{
+        font-size: 5vw;
+    }
+
+    #close-btn {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        /* background: none; */
+        border: none;
+        color: #ffffff;
+        font-size: 5vw;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.content{
+    height: calc(97.9vh - 80px);
+    width: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.left{
+    height: 100%;
+    width: 50%;
+    /* background-color: lightsalmon; */
+    padding: 0 4vw;
+}
+
+.left h1{
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 4vw;
+    line-height: 4.4vw;
+    padding-top: 4vw;
+}
+
+.left p{
+    width: 80%;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: #474646;
+    line-height: 1.5vw;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+}
+
+.left h1 span{
+    color: lightseagreen;
+}
+
+.left button{
+    /* width: 13vw; */
+    padding: 1.1vw 1.6vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+    background-color: lightseagreen;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    /* background-color: lightseagreen; */
+}
+
+.right img{
+    margin-top: 5px;
+    width: 100%;
+    height: calc(100% - 5px);
+    bottom: 0;
+    object-fit: cover;
+}
+
+#sign{
+    height: 5.2vh;
+    width: 6vw;
+    background-color: lightseagreen;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    font-size: 1.1vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#sign:hover{
+    background-color: #ffffff;
+    color: lightseagreen;
+    /* transition-duration: 0.6s; */
+}
